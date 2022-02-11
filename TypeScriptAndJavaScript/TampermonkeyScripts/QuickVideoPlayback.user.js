@@ -222,7 +222,7 @@
 					if (video !== null) { // 若 <video> 存在
 						video.volume = 0; // 将视频静音
 						video.addEventListener('playing', function () {
-							setTimeout(() => video.playbackRate = 8, 10000); // 0.8s 后将视频 8 倍速播放
+							setTimeout(() => video.playbackRate = 8, 100); // 0.8s 后将视频 8 倍速播放
 							intervals.fastPlay_2 = setInterval(function () {
 								if (video.playbackRate != 16) { // 若不是则设置
 									video.playbackRate = 16;
