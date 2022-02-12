@@ -206,7 +206,7 @@
 			intervals.removeAD = setInterval(function () {
 				const video = $('video[id^="cc_ad_"]'); // 获取广告 <video>
 				if (video !== null) { // 若 <video> 存在
-					video.playbackRate = 0.5; // 将广告 16 倍速播放
+					video.playbackRate = 1; // 将广告 16 倍速播放
 					video.volume = 0; // 将广告静音
 					const button = $('div.ccH5PlayBtn'); // 获取开始播放的 <div> 按钮
 					if (button !== null) { // 若 <div> 存在则点击
@@ -222,7 +222,7 @@
 					if (video !== null) { // 若 <video> 存在
 						video.volume = 0; // 将视频静音
 						video.addEventListener('playing', function () {
-							setTimeout(() => video.playbackRate = 8, 100); // 0.8s 后将视频 8 倍速播放
+							setTimeout(() => video.playbackRate = 1, 100); // 0.8s 后将视频 8 倍速播放
 							intervals.fastPlay_2 = setInterval(function () {
 								if (video.playbackRate != 16) { // 若不是则设置
 									video.playbackRate = 16;
